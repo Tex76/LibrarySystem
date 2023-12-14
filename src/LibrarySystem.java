@@ -22,6 +22,7 @@ public class LibrarySystem {
     //if doesn't exist then add it booksList.add(book); booksListSize++; return true;if it does not,
     // it adds the book to the system.
     public boolean addBook(Book book) {
+        try{
 
         if (searchBook(book.getAccessionNum()) != -1)//if already exists
             return false;
@@ -30,12 +31,17 @@ public class LibrarySystem {
         booksList.add(book);
         booksListSize++;
         return true;
+        }
+        catch (Exception e){
+            System.out.println("Error :" + e);
+        }
+        return false;
     }
     //This method is used to delete a book from the system, checking if the object is not found it returns false,
     // otherwise returns true and deletes the book
 
     public boolean deleteBook(long accessionNumber) {
-        if (searchBook(accessionNumber) == -1)// if the book doesnt exist return false
+        if (searchBook(accessionNumber) == -1)// if the book doesn't exist return false
             return false;
 
         Iterator<LibMember> iter = membersList.listIterator();
