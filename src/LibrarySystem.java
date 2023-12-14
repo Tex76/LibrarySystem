@@ -19,14 +19,14 @@ public class LibrarySystem {
 
     //This method is used to add a book to the system, first it checks if the book already exists in the
     // system,if(searchBook(book.getAccessionNum()) != -1)//if already exists return false;
-    //if doesnt exist then add it booksList.add(book); booksListSize++; return true;if it does not,
+    //if doesn't exist then add it booksList.add(book); booksListSize++; return true;if it does not,
     // it adds the book to the system.
     public boolean addBook(Book book) {
 
         if (searchBook(book.getAccessionNum()) != -1)//if already exists
             return false;
 
-        //if doesnt exist then add it
+        //if it doesn't exist then add it
         booksList.add(book);
         booksListSize++;
         return true;
