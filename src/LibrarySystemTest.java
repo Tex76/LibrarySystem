@@ -6,6 +6,16 @@ class LibrarySystemTest {
     Book book = new Book("Islands","Ackerley","Acton","Adamaris",1991,"1234100000000",1002);
     LibMember member = new  LibMember("Carter","William",'M',10176535,"34567281");
     LibrarySystem library = new LibrarySystem();
+
+    /*
+    Test the following functions
+    1. addBook
+    2. deleteBook
+    3. searchBook
+    4. issuedBook
+    5. isIssuedBook
+     */
+
     @Test
     void addBookNewCorrectValueTest() {
         assertTrue(library.addBook(book));
