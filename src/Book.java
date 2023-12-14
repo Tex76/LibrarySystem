@@ -6,8 +6,6 @@ public class Book
    public int yearPublication;
    public long accessionNum=1001;
    public LibMember issuedTo;
-
-  //new comment added for check how pull request will work
   
   //Default constructor (without any parameters)
    public Book()
