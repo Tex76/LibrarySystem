@@ -80,10 +80,6 @@ class LibrarySystemTest {
         assertFalse(library.issueBook(book.getAccessionNum(), member.getCprNum()));
     }
 
-    @Test
-    void issuedBookWithoutBookAndMemberExistence(){
-        assertFalse(library.issueBook(book.getAccessionNum(),member.getCprNum()));
-    }
 
     @Test
     void issuedAnIssuedBook(){

@@ -8,7 +8,7 @@ public class LibrarySystem {
     private LinkedList<LibMember> membersList;
     private int booksListSize;
     private int membersListSize;
-    //This is the default constructer Without any parameters
+    //This is the default constructor  Without any parameters
 
     public LibrarySystem() {
         booksList = new LinkedList<Book>();
@@ -82,7 +82,7 @@ public class LibrarySystem {
         {
             LibMember member1 = membersList.get(index);
 
-            //and if the member doesnt have any book issued to him delete member and return true
+            //and if the member does not have any book issued to him delete member and return true
             if (member1.getNumBooksIssued() == 0) {
                 membersList.remove(index);
                 membersListSize--;
@@ -98,7 +98,7 @@ public class LibrarySystem {
         if (booksList.isEmpty())
             return -1;
 
-        //initialize an iterator to search through all elemnts
+        //initialize an iterator to search through all elements
         Iterator<Book> iter = booksList.iterator();
         int index = 0;
 
@@ -109,7 +109,7 @@ public class LibrarySystem {
             index++;
         }
 
-        return -1; //if book doesnt exist
+        return -1; //if book does not exist
 
     }
 
@@ -119,7 +119,7 @@ public class LibrarySystem {
         if (membersList.isEmpty())
             return -1;
 
-        //initialize an iterator to search through all elemnts
+        //initialize an iterator to search through all elements
         Iterator<LibMember> iter = membersList.iterator();
         int index = 0;
 
@@ -163,10 +163,10 @@ public class LibrarySystem {
         int bookInd = searchBook(aNum);
         int memberInd = searchMember(cpr);
 
-        if (searchBook(aNum) == -1)//if the book doesnt exist in booksList return false
+        if (searchBook(aNum) == -1)//if the book does not exist in booksList return false
             return false;
 
-        if (searchMember(cpr) == -1)//if the member doesnt exist in membersList return false
+        if (searchMember(cpr) == -1)//if the member does not exist in membersList return false
             return false;
 
         if (isBookIssued(aNum))//if the book is issued to any member return false
@@ -220,7 +220,7 @@ public class LibrarySystem {
         }
         return false;
     }
-    //This method is to print all the detauks of all the books issued to the specific member.
+    //This method is to print all the details of all the books issued to the specific member.
 
     public void printBooksIssued(long cpr) {
         int memberInd = searchMember(cpr);
@@ -238,11 +238,11 @@ public class LibrarySystem {
             System.out.println("Member does not exist.");
     }
 
-    //This method is to checks if the book exists in the bookList and is issued to a member, or else it returns false.
+    //This method is to check if the book exists in the bookList and is issued to a member, or else it returns false.
     public boolean isBookIssued(long aNum) {
         int bookInd = searchBook(aNum);
         if (bookInd == -1)
-            return false; //if doesnt exist in the list return false
+            return false; //if it does not exist in the list return false
 
         //if issued to a member then return true
         Book b1 = booksList.get(bookInd);

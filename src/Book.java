@@ -142,4 +142,4 @@ public class Book
                 + "\nAccession Number=" + accessionNum + "\nIssued To=" + issuedTo.getCprNum());
    }
    
-}//end of calss Book
+}//end of class Book
