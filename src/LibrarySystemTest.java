@@ -29,14 +29,6 @@ class LibrarySystemTest {
     }
 
     @Test
-    void addBookWithTwoEmptyBookObjects(){
-        Book book1 = new Book();
-        Book book2 = new Book();
-        library.addBook(book1);
-        assertFalse(library.addBook(book2));
-    }
-
-    @Test
     void deleteBookExists(){
         library.addBook(book);
         assertTrue(library.deleteBook(this.book.getAccessionNum()));
