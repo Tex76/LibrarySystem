@@ -137,6 +137,8 @@ class LibrarySystemTest {
         assertFalse(library.issueBook(obj11.getAccessionNum(),member.getCprNum()));
     }
 
+
+
     @Test
     void isBookIssuedExistsIssuedBook() {
         library.addBook(book);
@@ -144,15 +146,14 @@ class LibrarySystemTest {
         library.issueBook(book.getAccessionNum(),member.getCprNum());
         assertTrue(library.isBookIssued(book.getAccessionNum()));
     }
-
     @Test
-    void isBookIssuedBookNotIssuedTest(){
-        library.addBook(book);
+    void isBookIssuedBookDoseNotExists(){
         assertFalse(library.isBookIssued(book.getAccessionNum()));
     }
 
     @Test
-    void isBookIssuedBookDoseNotExists(){
+    void isBookIssuedBookNotIssuedTest(){
+        library.addBook(book);
         assertFalse(library.isBookIssued(book.getAccessionNum()));
     }
 }
