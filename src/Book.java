@@ -28,7 +28,7 @@ public class Book
          this.isbn = isbn;
       else
       {
-         System.out.println("ISBN not 13 light");
+         System.out.println("ISBN must be 13 digit");
          return;
       }
       this.title = title;
@@ -142,4 +142,4 @@ public class Book
                 + "\nAccession Number=" + accessionNum + "\nIssued To=" + issuedTo.getCprNum());
    }
    
-}//end of calss Book
+}//end of class Book

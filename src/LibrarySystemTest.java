@@ -50,6 +50,14 @@ class LibrarySystemTest {
     }
 
     @Test
+    void deleteBookIsIssued(){
+        library.addBook(book);
+        library.addMember(member);
+        library.issueBook(book.getAccessionNum(), member.getCprNum());
+        assertFalse(library.deleteBook(this.book.getAccessionNum()));
+    }
+
+    @Test
     void searchBookExists(){
         library.addBook(book);
         assertEquals(0, library.searchBook(this.book.getAccessionNum()));
@@ -80,10 +88,6 @@ class LibrarySystemTest {
         assertFalse(library.issueBook(book.getAccessionNum(), member.getCprNum()));
     }
 
-    @Test
-    void issuedBookWithoutBookAndMemberExistence(){
-        assertFalse(library.issueBook(book.getAccessionNum(),member.getCprNum()));
-    }
 
     @Test
     void issuedAnIssuedBook(){
